@@ -1,7 +1,8 @@
 package Entidades;
 
-import Entidades.Animal;
-public class Cachorro extends Animal {
+import Entidades.Interfaces.ICachorro;
+
+public class Cachorro extends Animal implements ICachorro {
     private String _nome;
     private String _raca;
     private int _idade;
@@ -35,6 +36,30 @@ public class Cachorro extends Animal {
 
     public void setIdade(int idade) {
         this._idade = idade;
+    }
+
+    public void Latir(){
+        System.out.println("Cachorro Latindo*\nAU AU AU!");
+    }
+
+    public void PegarBolinha(){
+        System.out.println("*Cachorro pegou a bolinha*");
+    }
+
+    public void Dormir(){
+        System.out.println("*Cachorro dormiu*");
+    }
+
+    public void Acordar(){
+        System.out.println("*Cachorro Acordou*");
+    }
+
+    public void Comer(){
+        System.out.println("*Cachorro comendo*");
+    }
+
+    public void BeberAgua(){
+        System.out.println("*Cachorro bebendo agua*");
     }
 
     @Override

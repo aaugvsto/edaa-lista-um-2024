@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Entidades.*;
+import Entidades.Interfaces.ICachorro;
 
 public class Main {
     public static void main(String[] args) {
@@ -33,10 +34,17 @@ public class Main {
 
         // Letra D
         System.out.println("Letra D\n");
-        Cachorro cachorro = new Cachorro("Rex", "Vira-lata", 5, "Doméstico", "Casa");
+        ICachorro cachorro = new Cachorro("Rex", "Vira-lata", 5, "Doméstico", "Casa");
         System.out.println(cachorro + "\n");
 
-        System.out.println("Aplicação encerrada!");
+        cachorro.Acordar();
+        cachorro.Latir();
+        cachorro.Comer();
+        cachorro.PegarBolinha();
+        cachorro.BeberAgua();
+        cachorro.Dormir();
+
+        System.out.println("\nAplicação encerrada!");
     }
 }
 
